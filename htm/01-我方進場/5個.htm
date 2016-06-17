@@ -1,8 +1,9 @@
 <html>
 
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
+    <script src="../_script/jquery-3.0.0.min.js"></script>
+    <script src="../_script/jquery-ui.min.js"></script>
+    <script src="../_script/jquery.wait.js"></script>
 <style>
 div {
 border:1px solid #000;
@@ -39,75 +40,85 @@ $( document ).ready(function() {
 });
 function poi(){
 
-	var div = $( document.createElement("div") ).attr({id:'new01',class:'icon_a',
+	var div01 = $( document.createElement("div") ).attr({id:'new01',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;left: -50px;top: 50px;',
 	}).html("#new01");
-	$('#ddd').after(div);
+	$('#ddd').after(div01);
     $("#new01").css({
 	'background-image':'url("1399981045922.png")',
     'background-size':'auto 100px',
     'background-repeat':'no-repeat',
     'background-position':'50px -40px',
 	'font-size':'200%',
+	'display':'none',
 	});
 	
-	var div = $( document.createElement("div") ).attr({id:'new02',class:'icon_a',
+	var div02 = $( document.createElement("div") ).attr({id:'new02',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;left: -50px;top: 120px;',
 	}).html("#new02");
-	$('#ddd').after(div);
+	$('#ddd').after(div02);
     $("#new02").css({
 	'background-image':'url("1438320647073.png")',
     'background-size':'auto 110px',
     'background-repeat':'no-repeat',
     'background-position':'70px -50px',
 	'font-size':'200%',
+	'display':'none',
 	});
 
-	var div = $( document.createElement("div") ).attr({id:'new03',class:'icon_a',
+	var div03 = $( document.createElement("div") ).attr({id:'new03',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;left: -50px;top: 190px;',
 	}).html("#new03");
-	$('#ddd').after(div);
+	$('#ddd').after(div03);
     $("#new03").css({
 	'background-image':'url("14412095812556.png")',
     'background-size':'auto 110px',
     'background-repeat':'no-repeat',
     'background-position':'60px -50px',
 	'font-size':'200%',
+	'display':'none',
 	});
 	
-	var div = $( document.createElement("div") ).attr({id:'new04',class:'icon_a',
+	var div04 = $( document.createElement("div") ).attr({id:'new04',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;left: -50px;top: 260px;',
 	}).html("#new04");
-	$('#ddd').after(div);
+	$('#ddd').after(div04);
     $("#new04").css({
 	'background-image':'url("14412095801039.png")',
     'background-size':'auto 90px',
     'background-repeat':'no-repeat',
     'background-position':'60px -30px',
 	'font-size':'200%',
+	'display':'none',
 	});
 
 	
 	
-	var div = $( document.createElement("div") ).attr({id:'new05',class:'icon_a',
+	var div05 = $( document.createElement("div") ).attr({id:'new05',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;left: -50px;top: 330px;',
 	}).html("#new05");
-	$('#ddd').after(div);
+	$('#ddd').after(div05);
     $("#new05").css({
 	'background-image':'url("1441331338587.png")',
     'background-size':'auto 100px',
     'background-repeat':'no-repeat',
     'background-position':'60px -40px',
 	'font-size':'200%',
+	'display':'none',
 	});
 
 	
 	
-	$("#new01").delay(100).animate({left:"20px"});
-	$("#new02").delay(200).animate({left:"20px"});
-	$("#new03").delay(300).animate({left:"20px"});
-	$("#new04").delay(400).animate({left:"20px"});
-	$("#new05").delay(500).animate({left:"20px"});
+	//$('#ddd').after(div01);
+	$("#new01").wait(100).show().animate({left:"20px"});
+	//$('#ddd').after(div02);
+	$("#new02").wait(200).show().animate({left:"20px"});
+	//$('#ddd').after(div03);
+	$("#new03").wait(300).show().animate({left:"20px"});
+	//$('#ddd').after(div04);
+	$("#new04").wait(400).show().animate({left:"20px"});
+	//$('#ddd').after(div05);
+	$("#new05").wait(500).show().animate({left:"20px"});
 }
 </script>
 </head>
