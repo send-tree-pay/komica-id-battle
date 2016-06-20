@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<script src="../script/jquery-3.0.0.min.js"></script>
+<script src="../script/jquery-ui.min.js"></script>
+<script src="../script/jquery-timing.min.js"></script>
+<style>
+div {
+border:1px solid #000;
+}
+
+#ddd {
+width:800px; 
+height:480px;
+
+position: absolute;
+left: 20px;
+top: 20px;
+
+z-index: 5;
+}
+
+.effect_a {
+width:600px; 
+height:20px;
+z-index: 7;
+}
+
+.icon_a {
+width:200px; 
+height:50px;
+
+z-index: 6;
+}
+
+</style>
+<script>
+$( document ).ready(function() {
+    //console.log( "ready!" );
+	poi();
+});
+function poi(){
+	//
+    $("#ddd").css({
+	'background-image':'url("01.png")',
+    'background-size':'100% 100%',
+    'background-repeat':'no-repeat',
+	});
+	//
+	var div01 = $( document.createElement("div") ).attr({id:'new01',class:'icon_a',
+	style:'background-color:#fafad2;position: absolute;left: 0px;top: 50px;',
+	}).html("#new01");
+	//$('#ddd').after(div01);
+	$('#ddd').append(div01);
+    $("#new01").css({
+	'background-image':'url("1399981045922.png")',
+    'background-size':'auto 100px',
+    'background-repeat':'no-repeat',
+    'background-position':'50px -40px',
+	'font-size':'200%',
+	'display':'none',
+	});
+	var div11 = $( document.createElement("div") ).attr({id:'new11',class:'icon_a',
+	style:'background-color:#fafad2;position: absolute;right: 0px;top: 50px;',
+	}).html("#new11");
+	//$('#ddd').after(div01);
+	$('#ddd').append(div11);
+    $("#new11").css({
+	'background-image':'url("1399981045922.png")',
+    'background-size':'auto 100px',
+    'background-repeat':'no-repeat',
+    'background-position':'50px -40px',
+	'font-size':'200%',
+	'display':'none',
+	});
+	
+	//
+	$("#new01").wait(100).show();
+	$("#new11").wait(100).show();
+	
+	//
+	var div31 = $( document.createElement("div") ).attr({id:'new31',class:'effect_a',
+	style:'background-color:#fafad2;position: absolute;left: 100px;top: 200px;',
+	}).html("#new31");
+	$('#ddd').append(div31);
+    $("#new31").css({
+	'background-image':'url("01.png")',
+    'background-size':'auto 100%',
+    'background-repeat':'no-repeat',
+    'background-position':'0px 0px',
+	'font-size':'200%',
+	'display':'none',
+	});
+	$("#new31").append("<b>bbbb</b>");
+	//
+
+
+
+	$("#new31").wait(500).show();
+
+	
+
+
+	//
+
+
+}
+</script>
+</head>
+<body>
+<div id="ini" style="width:1024px;height:768px;"></div>
+
+<div id="ddd"></div>
+</body>
+</html>
