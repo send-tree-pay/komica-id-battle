@@ -30,7 +30,7 @@ z-index: 5;
 .effect_a {
 width:600px; 
 height:20px;
-z-index: 7;
+z-index: 4;
 }
 
 .icon_a {
@@ -67,6 +67,20 @@ function poi(){
 	'font-size':'200%',
 	'display':'none',
 	});
+	var div02 = $( document.createElement("div") ).attr({id:'new02',class:'icon_a',
+	style:'background-color:#fafad2;position: absolute;left: 0px;top: 100px;',
+	}).html("#new02");
+	//$('#ddd').after(div01);
+	$('#ddd').append(div02);
+    $("#new02").css({
+	'background-image':'url("1399981045922.png")',
+    'background-size':'auto 100px',
+    'background-repeat':'no-repeat',
+    'background-position':'50px -40px',
+	'font-size':'200%',
+	'display':'none',
+	});
+	//
 	var div11 = $( document.createElement("div") ).attr({id:'new11',class:'icon_a',
 	style:'background-color:#fafad2;position: absolute;right: 0px;top: 50px;',
 	}).html("#new11");
@@ -80,14 +94,28 @@ function poi(){
 	'font-size':'200%',
 	'display':'none',
 	});
-	
+	var div12 = $( document.createElement("div") ).attr({id:'new12',class:'icon_a',
+	style:'background-color:#fafad2;position: absolute;right: 0px;top: 100px;',
+	}).html("#new12");
+	//$('#ddd').after(div01);
+	$('#ddd').append(div12);
+    $("#new12").css({
+	'background-image':'url("1399981045922.png")',
+    'background-size':'auto 100px',
+    'background-repeat':'no-repeat',
+    'background-position':'50px -40px',
+	'font-size':'200%',
+	'display':'none',
+	});
 	//
 	$("#new01").wait(100).show();
+	$("#new02").wait(100).show();
 	$("#new11").wait(100).show();
+	$("#new12").wait(100).show();
 	
 	//
 	var div31 = $( document.createElement("div") ).attr({id:'new31',class:'effect_a',
-	style:'background-color:#fafad2;position: absolute;left: 100px;top: 200px;',
+	style:'background-color:#fafad2;position: absolute;left: 200px;top: 50px;',
 	}).html("#new31");
 	$('#ddd').append(div31);
     $("#new31").css({
@@ -110,12 +138,15 @@ function poi(){
 	//
 
 
-
+	$("#new01").wait(200).animate({left:"10px"},300).wait(1200).animate({left:"0px"},0);
+	$("#new12").wait(200).animate({right:"10px"},300).wait(800).animate({right:"0px"},0).effect( "shake", {times:3,distance:2,}, 400 );;
+	
 	$("#new31").wait(500).show({duration:0,complete:function(){
 		$("#img31").css({top: "10px",});
 		$("#img31").animate({left:"800px"},{duration:1000,easing:"linear",});
 		$("#new31").animate({backgroundPositionX:"800px",},{duration:1000,easing:"linear",});
-		$("#new31").css("transform","rotate(15deg)");
+		$("#new31").css("transform","rotate(10deg)");
+		$("#new31").css("transform-origin","0% 0%");
 
 	}});
 	//.show({duration:400,effect:"clip",easing:"swing",});
