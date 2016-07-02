@@ -1,0 +1,1 @@
+http://send-tree-pay.github.io/komica-id-battle/htm/03+%E6%94%BB%E6%93%8A%E5%A0%B4%E6%99%AF/
