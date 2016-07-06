@@ -19,6 +19,10 @@ http://homu-homuapi.rhcloud.com/res/7934378
 綜合ID查詢
 https://komica-cache.appspot.com/
 
+++
+綜合-即時訊息(仮) - HomuAPI - Komica
+http://homu-api.herokuapp.com/
+
 
 ++js等待功能
 [plugin] wait function
